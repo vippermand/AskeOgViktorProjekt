@@ -1,10 +1,10 @@
 @page
-@model AskeOgViktorProjekt.Pages.Users
+@model AskeOgViktorProjekt.Pages.UsersModel
 @{
-    ViewData["Title"] = "Users";
+    ViewData["Title"] = "All Registered Users";
 }
 
-<h1>@ViewData["Title"]</h1>
+
 
 @if (Model.Users == null || !Model.Users.Any())
 {

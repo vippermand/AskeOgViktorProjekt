@@ -1,4 +1,4 @@
-namespace AskeOgViktorProjekt.Data // Namespace matches the folder
+namespace AskeOgViktorProjekt.Models // Namespace matches the folder
 {
    
  public class User

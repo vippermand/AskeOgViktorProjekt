@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using AskeOgViktorProjekt.Models;
 using AskeOgViktorProjekt.Pages;
 
 

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AskeOgViktorProjekt.Data;
+using AskeOgViktorProjekt.Models;
+
 
 
 
