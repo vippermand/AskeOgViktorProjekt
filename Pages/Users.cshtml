@@ -6,29 +6,7 @@
 
 
 
-@if (Model.Users == null || !Model.Users.Any())
-{
-    <p>No users have been registered yet.</p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Password (Hashed/Hidden in real apps)</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var user in Model.Users)
-            {
-                <tr>
-                    <td>@user.Id</td>
-                    <td>@user.Name</td>
-                    <td>@user.Password</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<h2>Users</h2>
+<button onclick="loadUsers()">Load Users</button>
+<div id="result"></div>
+
