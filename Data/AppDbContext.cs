@@ -14,5 +14,10 @@ namespace AskeOgViktorProjekt.Data
 
 
         public DbSet<User> Users { get; set; } = default!;
+
+        public async Task<User?> ValidateUserAsync(string name, string password)
+        {
+            return await Users.FirstOrDefaultAsync(u => u.Name == name && u.Password == password);
+        }
     }
 }
