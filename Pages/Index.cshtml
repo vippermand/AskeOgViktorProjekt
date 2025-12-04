@@ -4,17 +4,14 @@
     ViewData["Title"] = "Home page";
 }
 
-        <form method="post">
-           
-            <label asp-for="NewUser.Name">Name</label><br>
-            <input type="text" asp-for="NewUser.Name" /><br>
-            <span asp-validation-for="NewUser.Name" class="text-danger"></span><br>
+<form id="registerForm" method="post" onsubmit="return checkform(event, this)">
+    <label asp-for="NewUser.Name">Name</label><br>
+    <input type="text" asp-for="NewUser.Name" id="name" /><br>
+    <span asp-validation-for="NewUser.Name" class="text-danger"></span><br>
 
+    <label asp-for="NewUser.Password">Password</label><br>
+    <input type="password" asp-for="NewUser.Password" id="password" /><br>
+    <span asp-validation-for="NewUser.Password" class="text-danger"></span><br>
 
-            <label asp-for="NewUser.Password">Password</label><br>
-            <input type="password" asp-for="NewUser.Password" /><br>
-            <span asp-validation-for="NewUser.Password" class="text-danger"></span><br>
-
-
-            <input type="submit" value="Register"/>
-        </form>
+    <input type="submit" value="Register"/>
+</form>
