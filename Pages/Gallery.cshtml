@@ -1,0 +1,29 @@
+@page
+@model AskeOgViktorProjekt.Pages.Gallery
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<h2>Gallery</h2>
+
+@if (!Model.Images.Any())
+{
+    <p>No images uploaded yet.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var img in Model.Images)
+        {
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                    <img src="@img.Url" class="card-img-top" alt="@img.FileName" style="object-fit:cover; height:180px;" />
+                    <div class="card-body">
+                        <p class="card-text text-truncate" title="@img.FileName">@img.FileName</p>
+                        <a class="btn btn-sm btn-outline-primary" href="@img.Url" target="_blank">Open</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,13 +1,23 @@
-namespace AskeOgViktorProjekt.Models // Namespace matches the folder
+
+namespace AskeOgViktorProjekt.Models
 {
-   
- public class User
+    public class User
     {
-        // Primary Key (EF Core recognizes 'Id' or 'UserID' by convention)
         public int Id { get; set; }
-       
-        // Example user properties
-        public string Name { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public string Name { get; set; } = default!;
+        public string Password { get; set; } = default!; // consider hashing!
+        public ICollection<Image> Images { get; set; } = new List<Image>();
+    }
+
+    public class Image
+    {
+        public int Id { get; set; }
+        public string OriginalFileName { get; set; } = default!;
+        public string ContentType { get; set; } = default!;
+        public string RelativePath { get; set; } = default!;
+        public int? UserId { get; set; }
+        public User? User { get; set; }
+        public DateTime UploadedUtc { get; set; } = DateTime.UtcNow;
     }
 }
+
