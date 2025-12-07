@@ -1,12 +1,24 @@
 using Microsoft.EntityFrameworkCore;
 using AskeOgViktorProjekt.Data;
 using AskeOgViktorProjekt.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Add cookie authentication
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Identity/Account/Login";
+        options.LogoutPath = "/Identity/Account/Logout";
+        options.Cookie.Name = "AskeOgViktor.Auth";
+        options.ExpireTimeSpan = TimeSpan.FromHours(8);
+    });
 
 
 // Essential Step: Register the DbContext with SQLite
@@ -42,6 +54,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Authentication must come before Authorization
+app.UseAuthentication();
 
 app.UseAuthorization();
 

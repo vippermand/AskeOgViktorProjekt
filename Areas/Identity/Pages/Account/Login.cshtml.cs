@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AskeOgViktorProjekt.Data;
 using AskeOgViktorProjekt.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 namespace AskeOgViktorProjekt.Areas.Identity.Pages.Account;
 
 public class LoginModel : PageModel
@@ -28,20 +31,39 @@ public class LoginModel : PageModel
             return Page();
         }
 
-        _logger.LogInformation("Login attempt for user '{Name}'", NewUser.Name);
+        var name = NewUser.Name?.Trim() ?? string.Empty;
+        var password = NewUser.Password ?? string.Empty;
 
-        var matched = await _context.ValidateUserAsync(NewUser.Name, NewUser.Password);
+        _logger.LogInformation("Login attempt for user '{Name}'", name);
+
+        var matched = await _context.ValidateUserAsync(name, password);
 
         if (matched == null)
         {
-            _logger.LogInformation("Login failed for user '{Name}'", NewUser.Name);
+            _logger.LogInformation("Login failed for user '{Name}'", name);
             ModelState.AddModelError(string.Empty, "Invalid username or password.");
             return Page();
         }
 
         _logger.LogInformation("Login succeeded for user '{Name}' (Id: {Id})", matched.Name, matched.Id);
 
-        // Login succeeded. For now redirect to Index and set a TempData message.
+        // Create user claims and sign in with cookie authentication
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, matched.Id.ToString()),
+            new Claim(ClaimTypes.Name, matched.Name)
+        };
+
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+
+        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal,
+            new AuthenticationProperties
+            {
+                IsPersistent = true,
+                ExpiresUtc = DateTimeOffset.UtcNow.AddHours(8)
+            });
+
         TempData["Message"] = $"Welcome, {matched.Name}!";
         return RedirectToPage("/Index");
     }

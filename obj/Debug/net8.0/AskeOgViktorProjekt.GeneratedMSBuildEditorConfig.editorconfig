@@ -9,71 +9,75 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AskeOgViktorProjekt
 build_property.RootNamespace = AskeOgViktorProjekt
-build_property.ProjectDir = C:\Users\Klaus\Desktop\AskeOgViktorProjekt\PortFolioAflevering\AskeOgViktorProjekt\
+build_property.ProjectDir = C:\Users\Magic\OneDrive - Syddansk Universitet\SpilTek\3. Semester\Web programmering 1\0 - Opgaver\AskeOgViktorProjekt\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Klaus\Desktop\AskeOgViktorProjekt\PortFolioAflevering\AskeOgViktorProjekt
+build_property.MSBuildProjectDirectory = C:\Users\Magic\OneDrive - Syddansk Universitet\SpilTek\3. Semester\Web programmering 1\0 - Opgaver\AskeOgViktorProjekt
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Areas/Identity/Pages/_Viewstart.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Areas/Identity/Pages/_Viewstart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdzdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Error.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Gallery.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Gallery.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FsbGVyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Images.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Images.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW1hZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Index.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Privacy.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Users.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/_ViewImports.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/_ViewStart.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Klaus/Desktop/AskeOgViktorProjekt/PortFolioAflevering/AskeOgViktorProjekt/Pages/Shared/_Layout.cshtml]
+[C:/Users/Magic/OneDrive - Syddansk Universitet/SpilTek/3. Semester/Web programmering 1/0 - Opgaver/AskeOgViktorProjekt/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-u9kot5rqa1
