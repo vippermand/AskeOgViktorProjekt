@@ -30,7 +30,8 @@ namespace AskeOgViktorProjekt.Pages
                     i.OriginalFileName,
                     i.RelativePath,
                     i.ContentType,
-                    i.Title  // Add this line
+                    i.Title,
+                    i.Description // added
                 })
                 .ToListAsync();
 
@@ -46,7 +47,8 @@ namespace AskeOgViktorProjekt.Pages
                     Id = i.Id,
                     FileName = i.OriginalFileName ?? "",
                     Url = rel,
-                    Title = i.Title  // Add this line
+                    Title = i.Title,
+                    Description = i.Description // added
                 });
             }
         }
@@ -57,6 +59,7 @@ namespace AskeOgViktorProjekt.Pages
         public int Id { get; set; }
         public string FileName { get; set; } = "";
         public string Url { get; set; } = "";
-        public string? Title { get; set; }  // Add this line
+        public string? Title { get; set; }
+        public string? Description { get; set; } // added
     }
 }

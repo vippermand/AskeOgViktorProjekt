@@ -31,6 +31,10 @@ namespace AskeOgViktorProjekt.Pages
         [BindProperty]
         public string? ImageTitle { get; set; }
 
+        // Add description bind property:
+        [BindProperty]
+        public string? ImageDescription { get; set; }
+        
         // Used by the view to show a preview after upload
         public Image? RecentImage { get; set; }
 
@@ -91,7 +95,8 @@ namespace AskeOgViktorProjekt.Pages
                 OriginalFileName = Path.GetFileName(ImageFile.FileName),
                 ContentType = ImageFile.ContentType,
                 RelativePath = relativePath,
-                Title = ImageTitle,  // Add this line
+                Title = ImageTitle,
+                Description = ImageDescription, // added
                 UploadedUtc = DateTime.UtcNow
             };
 
