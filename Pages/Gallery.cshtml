@@ -19,6 +19,10 @@ else
                 <div class="card">
                     <img src="@img.Url" class="card-img-top" alt="@img.FileName" style="object-fit:cover; height:180px;" />
                     <div class="card-body">
+                        @if (!string.IsNullOrEmpty(Model.Images[0].Title))
+                        {
+                            <p class="card-title"><strong>@img.Title</strong></p>
+                        }
                         <p class="card-text text-truncate" title="@img.FileName">@img.FileName</p>
                         <a class="btn btn-sm btn-outline-primary" href="@img.Url" target="_blank">Open</a>
                     </div>

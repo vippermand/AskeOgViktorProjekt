@@ -27,6 +27,10 @@ namespace AskeOgViktorProjekt.Pages
         [BindProperty]
         public IFormFile? ImageFile { get; set; }
 
+        // Add this property alongside ImageFile:
+        [BindProperty]
+        public string? ImageTitle { get; set; }
+
         // Used by the view to show a preview after upload
         public Image? RecentImage { get; set; }
 
@@ -87,6 +91,7 @@ namespace AskeOgViktorProjekt.Pages
                 OriginalFileName = Path.GetFileName(ImageFile.FileName),
                 ContentType = ImageFile.ContentType,
                 RelativePath = relativePath,
+                Title = ImageTitle,  // Add this line
                 UploadedUtc = DateTime.UtcNow
             };
 

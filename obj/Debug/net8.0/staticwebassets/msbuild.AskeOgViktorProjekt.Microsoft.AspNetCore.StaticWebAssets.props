@@ -992,6 +992,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\6b3edcd1d0c4419fa4263e02f907eff2.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\7b7aa558a13943a2a6153f81d3718ef2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>AskeOgViktorProjekt</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AskeOgViktorProjekt</BasePath>
+      <RelativePath>uploads/misc/2025/12/7b7aa558a13943a2a6153f81d3718ef2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\7b7aa558a13943a2a6153f81d3718ef2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\84d2f51804a7442ab44418d19e88c9e7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>AskeOgViktorProjekt</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AskeOgViktorProjekt</BasePath>
+      <RelativePath>uploads/misc/2025/12/84d2f51804a7442ab44418d19e88c9e7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\84d2f51804a7442ab44418d19e88c9e7.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\misc\2025\12\bfd731687eeb4dd8b3f4869133f8b486.webp))">
       <SourceType>Package</SourceType>
       <SourceId>AskeOgViktorProjekt</SourceId>

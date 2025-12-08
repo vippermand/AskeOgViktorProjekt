@@ -15,6 +15,7 @@ namespace AskeOgViktorProjekt.Models
         public string OriginalFileName { get; set; } = default!;
         public string ContentType { get; set; } = default!;
         public string RelativePath { get; set; } = default!;
+        public string? Title { get; set; }
         public int? UserId { get; set; }
         public User? User { get; set; }
         public DateTime UploadedUtc { get; set; } = DateTime.UtcNow;
