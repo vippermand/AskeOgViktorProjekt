@@ -8,7 +8,7 @@
       .then(data => {
         let html = "<ul>";
         data.forEach(user => {
-          html += `<li>Id: ${user.id}, Name: ${user.name}, Password: ${user.password}</li>`;
+          html += `<li>Id: ${user.id}, Name: ${user.name}</li>`;
         });
         html += "</ul>";
         document.getElementById("result").innerHTML = html;
