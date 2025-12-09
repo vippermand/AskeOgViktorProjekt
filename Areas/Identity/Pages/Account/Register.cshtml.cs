@@ -17,10 +17,6 @@ public class RegisterModel : PageModel
         _context = context;
     }
 
-    public void OnGet()
-    {
-    }
-
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

@@ -16,13 +16,14 @@
   }
 
 
-document.getElementById("registerForm").addEventListener("submit", function(event) 
-{
-    if (!checkform(event, this)) 
-    {
-        event.preventDefault();
+const registerForm = document.getElementById("registerForm");
+if (registerForm) {
+  registerForm.addEventListener("submit", function(event) {
+    if (!checkform(event, this)) {
+      event.preventDefault();
     }
-});
+  });
+}
 
   //Register user with Regex
 function checkform(event, form) {

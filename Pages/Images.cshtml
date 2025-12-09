@@ -5,40 +5,46 @@
 }
 
 <h2>Upload Image</h2>
-
-<form method="post" enctype="multipart/form-data">
-    @* Anti-forgery token is recommended *@
-    @Html.AntiForgeryToken()
-
-    <div class="mb-3">
-        <label for="ImageFile" class="form-label">Choose image</label>
-        <input type="file" name="ImageFile" id="ImageFile" class="form-control" accept="image/*" />
-        <small class="text-muted">Max 5 MB. JPG/PNG/WebP only.</small>
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label for="ImageTitle" class="form-label">Title (optional)</label>
-        <input type="text" name="ImageTitle" id="ImageTitle" class="form-control" maxlength="200" />
-    </div>
-
-    <div class="mb-3">
-        <label for="ImageDescription" class="form-label">Description (optional)</label>
-        <textarea name="ImageDescription" id="ImageDescription" class="form-control" rows="3" maxlength="1000"></textarea>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Upload</button>
-</form>
-
-<partial name="_ValidationScriptsPartial" />
-
-@if (Model.RecentImage is not null)
+@if (User.Identity?.IsAuthenticated ?? true)
 {
-    <hr />
-    <h4>Uploaded</h4>
-    <p>@Model.RecentImage.OriginalFileName (@Model.RecentImage.ContentType)</p>
-    <p><strong>Title:</strong> @Model.RecentImage.Title</p>
-    <p><strong>Description:</strong> @Model.RecentImage.Description</p>
-    @Model.RecentImage.RelativePath
-}
+    <form method="post" enctype="multipart/form-data">
+        @* Anti-forgery token is recommended *@
+        @Html.AntiForgeryToken()
 
+        <div class="mb-3">
+            <label for="ImageFile" class="form-label">Choose image</label>
+            <input type="file" name="ImageFile" id="ImageFile" class="form-control" accept="image/*" />
+            <small class="text-muted">Max 5 MB. JPG/PNG/WebP only.</small>
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="ImageTitle" class="form-label">Title (optional)</label>
+            <input type="text" name="ImageTitle" id="ImageTitle" class="form-control" maxlength="200" />
+        </div>
+
+        <div class="mb-3">
+            <label for="ImageDescription" class="form-label">Description (optional)</label>
+            <textarea name="ImageDescription" id="ImageDescription" class="form-control" rows="3" maxlength="1000"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+
+    <partial name="_ValidationScriptsPartial" />
+
+    @if (Model.RecentImage is not null)
+    {
+        <hr />
+        <h4>Uploaded</h4>
+        <p>@Model.RecentImage.OriginalFileName (@Model.RecentImage.ContentType)</p>
+        <p><strong>Title:</strong> @Model.RecentImage.Title</p>
+        <p><strong>Description:</strong> @Model.RecentImage.Description</p>
+        @Model.RecentImage.RelativePath
+    }
+
+}
+else
+{
+    <p>Please log in to upload images.</p>
+}
