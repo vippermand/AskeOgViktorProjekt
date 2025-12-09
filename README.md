@@ -40,9 +40,15 @@ Der skal laves et ajax kald
 
 I skal sikre jer mod Cross-Site Scripting (CXX)
 
+* Da koden er skrevet i the backend så er der ikke adgang til cross-site scripting
+* Bruget af @ expression i .cshtml filer undgår at brugere kan bruge karakterer som <, >, \& og "
+* Desuden så kan man ikke køre kode igennem ASP.net uploaded materiale
+
 
 
 I skal sikre jer mod SQL Injection
+
+* Asp validering af brugere beskytter imod SQL injection
 
 
 

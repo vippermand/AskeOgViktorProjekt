@@ -23,24 +23,19 @@ namespace AskeOgViktorProjekt.Pages
             _env = env;
         }
 
-        // Bound to <input type="file" name="ImageFile" ... />
         [BindProperty]
         public IFormFile? ImageFile { get; set; }
 
-        // Add this property alongside ImageFile:
         [BindProperty]
         public string? ImageTitle { get; set; }
 
-        // Add description bind property:
         [BindProperty]
         public string? ImageDescription { get; set; }
         
-        // Used by the view to show a preview after upload
         public Image? RecentImage { get; set; }
 
         public void OnGet()
         {
-            // No-op. Page just renders the upload form.
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -67,7 +62,6 @@ namespace AskeOgViktorProjekt.Pages
                 return Page();
             }
 
-            // Build dated folder: wwwroot/uploads/misc/yyyy/MM
             var relativeFolder = Path.Combine("uploads", "misc",
                 DateTime.UtcNow.ToString("yyyy"),
                 DateTime.UtcNow.ToString("MM"));
@@ -75,21 +69,17 @@ namespace AskeOgViktorProjekt.Pages
             var physicalFolder = Path.Combine(_env.WebRootPath, relativeFolder);
             Directory.CreateDirectory(physicalFolder);
 
-            // Generate filename and paths
             var ext = Path.GetExtension(ImageFile.FileName);
             var newFileName = $"{Guid.NewGuid():N}{ext}";
             var physicalPath = Path.Combine(physicalFolder, newFileName);
 
-            // Web path like "/uploads/misc/2025/12/xxxxx.png"
             var relativePath = "/" + Path.Combine(relativeFolder, newFileName).Replace('\\', '/');
 
-            // Save file to disk
             using (var stream = System.IO.File.Create(physicalPath))
             {
                 await ImageFile.CopyToAsync(stream);
             }
 
-            // Create DB row
             var image = new Image
             {
                 OriginalFileName = Path.GetFileName(ImageFile.FileName),
@@ -103,10 +93,8 @@ namespace AskeOgViktorProjekt.Pages
             _db.Images.Add(image);
             await _db.SaveChangesAsync();
 
-            // Expose to the Razor page for preview
             RecentImage = image;
 
-            // Stay on page and show the preview
             return Page();
         }
     }
